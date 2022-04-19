@@ -1,0 +1,6 @@
+import {reducer} from "../info/reducer";
+import { createStore } from 'redux'
+
+const store = createStore()
+
+export { store }
