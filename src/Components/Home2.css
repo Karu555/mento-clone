@@ -1,0 +1,14 @@
+
+.home2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border-color:1px solid red; */
+}
+.home21{
+    /* border: 1px solid red; */
+   height: 450px;
+    width:400px;
+    margin: 15px;
+    
+}

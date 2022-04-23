@@ -1,0 +1,22 @@
+.div1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .left {
+    /* border: 1px solid red; */
+    width: 30%;
+    margin-left: 100px;
+    margin-right: 20px;
+  }
+  .right {
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 400px;
+    margin-right: 50px;
+    border-radius: 5px;
+  }
+  img {
+    width: 150px;
+  }
+  
