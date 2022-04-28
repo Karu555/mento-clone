@@ -5,7 +5,7 @@ import { Navbar } from "./Navbar";
 
 export const Product = () => {
   const [productData, setProductData] = useState([]);
-  //   console.log(productData);
+    // console.log(productData);
 
   const [filterData, setFilterData] = useState([]);
 
@@ -28,6 +28,7 @@ export const Product = () => {
       setFilterData(data.data);
     });
   }, []);
+  
   return (
     <>
       <Navbar/>
@@ -40,7 +41,7 @@ export const Product = () => {
         <h4>FILM-MAKING</h4>
       </div>
       <div onClick={() => getText("beat-boxing")}>
-        <h4>BEAT BOING</h4>
+        <h4>BEAT BOXING</h4>
       </div>
       <div onClick={() => getText("content-creation")}>
         <h4>CONTENT CREATION</h4>{" "}

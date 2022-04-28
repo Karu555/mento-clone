@@ -1,29 +1,29 @@
 body{
-  background: url("https://www.mento.co.in/assets/all-topics-bg-c70ac…6cc16261ddb6d5b08a7f43fa4dc0e78f5488466e78514.png") no-repeat center center fixed;
-}
-.container-div {
-  display: flex;
-  justify-content: space-between;
-  margin-top:100px;
-    /* border: 1px solid red; */
-}
-.left-div {
-  /* border: 1px solid blue; */
-  width: 25%;
-  /* height: 600px; */
-}
-.right-div {
-  display: grid;
-  grid-template-columns: repeat(3, 28%);
-  gap: 60px;
-  /* border: 1px solid green; */
-  width: 70%;
-  /* height: 600px; */
-}
-.image-div {
-  /* border: 1px solid grey; */
-  height: 300px;
-}
-h4{
-  cursor: pointer;
-}
+    background: url("https://www.mento.co.in/assets/all-topics-bg-c70ac…6cc16261ddb6d5b08a7f43fa4dc0e78f5488466e78514.png") no-repeat center center fixed;
+  }
+  .container-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top:100px;
+      /* border: 1px solid red; */
+  }
+  .left-div {
+    /* border: 1px solid blue; */
+    width: 25%;
+    /* height: 600px; */
+  }
+  .right-div {
+    display: grid;
+    grid-template-columns: repeat(3, 28%);
+    gap: 60px;
+    /* border: 1px solid green; */
+    width: 70%;
+    /* height: 600px; */
+  }
+  .image-div {
+    /* border: 1px solid grey; */
+    height: 300px;
+  }
+  h4{
+    cursor: pointer;
+  }

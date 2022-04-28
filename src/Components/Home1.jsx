@@ -1,7 +1,10 @@
+import React from 'react';
+import Reactplayer from 'react-player';
+import { Grid, Box, Typography, Container } from '@mui/material';
+import { borders } from '@mui/system';
 import "./Home1.css";
 
-//import ReactPlayer from "react-player";
-const Home1 = () => {
+export const Home1 = () => {
   return (
     <div>
       <div className="div1">
@@ -11,20 +14,20 @@ const Home1 = () => {
             India's Biggest <br />
             Mentors
           </h1>
-          <h5>
+          <p>
             SCROLL DOWN TO DISCOVER <br />
             LEARN FROM THE BEST <br />
             OVER 350+ VIDEO LESSONS <br />
             GET SIGNED CERTIFICATES
-          </h5>
+          </p>
           <br />
-          <span>
+          <span className='spanh1'>
             <img
               src="https://www.mento.co.in/assets/google-play-black-f7eb60056f740e3f7175688fc28e4fc4c2c2a20fc8a26b4fe4d2e944e24fa014.svg"
               alt="Get it on Google Play"
             />
           </span>
-          <span>
+          <span className='spanh2'>
             <img
               src="https://www.mento.co.in/assets/app-store-black-89aa31eafa093e3c654fd68421e895d386767ea78997aa91db6ef811c3fb0152.svg"
               alt="Download on the App Store"
@@ -32,20 +35,22 @@ const Home1 = () => {
           </span>
         </div>
         <div className="right">
-          <div>
-            <video loop autoPlay>
-              <source
-                src="https://d1tthr7pv14hhy.cloudfront.net/Images/general/background1.mp4"
-                type="video/mp4"
-                width="50%"
-                height="100%"
-              />
-            </video>
-          </div>
+          
+          <Reactplayer
+                            url='https://d1tthr7pv14hhy.cloudfront.net/Images/general/background1.mp4'
+                            playing={true}
+                            loop={true}
+                            muted={true}
+                            width='100%'
+                            height='400px'
+                       
+                        />
+            
+    
         </div>
       </div>
     </div>
   );
 };
 
-export { Home1 };
+
