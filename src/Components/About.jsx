@@ -1,6 +1,9 @@
 import "./About.css"
+import { Footerdown } from "./Footerdown";
+import { Navbar } from "./Navbar";
 export const About = () => {
     return( <>
+    <Navbar />
       <div className="about">
         <div className="about12">
           Ever wondered what you really <br />
@@ -33,6 +36,7 @@ export const About = () => {
         {/* <a href="mailto:Avdheshpal2201@gmail.com" >SUPPORT@gmail.com</a> */}
       </div>
       </div>
+      <Footerdown />
     </>
     )};
   
