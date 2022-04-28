@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Product.css";
 import { Navbar } from "./Navbar";
+import { Footerdown } from "./Footerdown";
 
 export const Product = () => {
   const [productData, setProductData] = useState([]);
@@ -23,7 +24,7 @@ export const Product = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8000/ALL_TOPICS").then((data) => {
+    axios.get("https://alltopics-server.herokuapp.com/ALL_TOPICS").then((data) => {
       setProductData(data.data);
       setFilterData(data.data);
     });
@@ -32,101 +33,104 @@ export const Product = () => {
   return (
     <>
       <Navbar/>
+      <div  onClick={() => getText("all")} className="up" ><span className="up1">All</span> Topic</div>
       <div className="container-div">
         <div className="left-div">
         <div onClick={() => getText("all")}>
-        <h4>ALL TOPICS</h4>
+        <h5>ALL TOPICS</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>FILM-MAKING</h4>
+        <h5>FILM-MAKING</h5>
       </div>
       <div onClick={() => getText("beat-boxing")}>
-        <h4>BEAT BOXING</h4>
+        <h5>BEAT BOXING</h5>
       </div>
       <div onClick={() => getText("content-creation")}>
-        <h4>CONTENT CREATION</h4>{" "}
+        <h5>CONTENT CREATION</h5>{" "}
       </div>
       <div onClick={() => getText("beat-boxing")}>
-        <h4>CONTENT CREATION</h4>
+        <h5>CONTENT CREATION</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>FILM PRODUCTION</h4>
+        <h5>FILM PRODUCTION</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>NOVEL WRITING</h4>
+        <h5>NOVEL WRITING</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>ENTREPRENEURSHIP</h4>
+        <h5>ENTREPRENEURSHIP</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>MUSIC</h4>
+        <h5>MUSIC</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>FASHION BLOGGING</h4>
+        <h5>FASHION BLOGGING</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>DESIGN</h4>
+        <h5>DESIGN</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>ILLUSTRATION</h4>
+        <h5>ILLUSTRATION</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>F&B</h4>
+        <h5>F&B</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>BAKING</h4>
+        <h5>BAKING</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>EMCEEING</h4>
+        <h5>EMCEEING</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>PERFORMING ARTS</h4>
+        <h5>PERFORMING ARTS</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>STAND-UP COMEDY</h4>
+        <h5>STAND-UP COMEDY</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>IMPROV COMEDY</h4>
+        <h5>IMPROV COMEDY</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>ARTIST MANAGEMENT</h4>
+        <h5>ARTIST MANAGEMENT</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>FOOD BLOGGING</h4>
+        <h5>FOOD BLOGGING</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>CHEF</h4>
+        <h5>CHEF</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>RADIO JOCKEY</h4>
+        <h5>RADIO JOCKEY</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>PHOTOGRAPHY</h4>
+        <h5>PHOTOGRAPHY</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>RESTAURANT BUSINESS</h4>
+        <h5>RESTAURANT BUSINESS</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>WEB SERIES</h4>
+        <h5>WEB SERIES</h5>
       </div>
       <div onClick={() => getText("film-making")}>
-        <h4>PERSONAL FINANCE</h4>
+        <h5>PERSONAL FINANCE</h5>
       </div>
           
 
           {/* jitne category hai utne div dala uper me aur "onclick" pe getText function ko call kiya jisme jo 'category' div me di hai wo getText function me dalna hai  */}
         </div>
+       
         <div className="right-div">
           {filterData.map((el) => (
             <div className="image-div" key={el.id}>
               <img src={el.profile_img} alt="" height={"60%"} width={"100%"} />
-              <div>{el.name}</div>
+              <div> <h3>{el.name}</h3></div>
               <div>{el.title}</div>
-              <div>{el.role}</div>
+              <div> <p>{el.role}</p></div>
             </div>
           ))}
         </div>
       </div>
+      <Footerdown />
     </>
   );
 };

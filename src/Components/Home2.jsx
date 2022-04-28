@@ -11,7 +11,7 @@ const Home2 = () => {
     useEffect(() => {
         dispatch(handleloading())
 
-        fetch("http://localhost:8000/ALL_TOPICS")
+        fetch("https://alltopics-server.herokuapp.com/ALL_TOPICS")
         .then((res) => res.json())
         .then((res) => dispatch(allTopics(res)))
         .catch(() => dispatch(handleError()))
